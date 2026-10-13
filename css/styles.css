@@ -1,0 +1,70 @@
+body {font-family: 'Crimson Text', Times New Roman, serif; color: #000000; z-index: 90;}
+h1, .h1, h2, .h2, h3, h3, h4, .h4, h5, .h5 {font-family: 'Quintessential', Times New Roman, serif; font-weight: 700; padding-top: 1rem; padding-bottom: 0.5rem;}
+h1, .h1 {font-size: 4.3rem; margin-bottom: 0; line-height: 1; padding-bottom: 2.5rem;}
+h2, .h2 {font-size: 3rem; text-transform: uppercase;}
+h2 > span, .h2 > span {width: auto; display: inline-block; padding: 0 2rem;}
+h3, .h3 {text-transform: uppercase;}
+h4, .h4 {font-size: 2.1rem; margin: 0; position: relative; top: 0.5rem;}
+.background {position:fixed;top:0;left:0;width:100%;height:120vh;background-image:url("../img/bg.jpg");background-size:cover;background-position:center;background-repeat:no-repeat;background-attachment:fixed;z-index:-1;opacity:0.9;}
+.quote, .author, .quote a, .author a {text-decoration: none;}
+.quote {font-style: italic; font-size: 2rem;}
+.author {text-align: right;}
+.logo {width: 6rem; display: block;        /* Zruší inline chování obrázku */
+  margin: 0 auto;        /* Vystředí vodorovně */
+  max-width: 100%;       /* Obrázek se přizpůsobí rodiči */
+  height: auto;}
+.anchor {display: block;height:3rem;margin-top:-3rem;visibility: hidden;}
+p, .p, ul, li {font-size: 1.3rem; line-height: 120%;}
+p a, .p a {color: inherit; text-decoration: none; transition: all .15s ease-in-out; position: relative;}
+p a::after {content: ''; transition: all .15s ease-in-out; position: absolute; left: 0; top: 100%; width: 100%; height: 0rem; background-color: #000; pointer-events: none;}
+p a:hover::after, p a:active::after, p a:focus::after, .p a:hover::after, .p a:active::after, .p a:focus::after {height: 0.125rem;}
+nav {font-family: 'Quintessential', Times New Roman, serif; text-transform: uppercase; font-weight: 700;}
+.navbar {background-color: rgb(159,8,7) !important;}
+.nav-link, .nav-item {padding-left: 1rem !important; padding-right: 1rem !important; transition: all .15s ease-in-out; color: rgb(244,222,110) !important; font-size: 1.5rem; position:relative;}
+.nav-item:before {content: ''; top: 0; left: 0; width: 1.5rem; height: 3rem; background-image: url('../img/vavrin-left.png'); background-size: 100%; background-position: center; background-repeat: no-repeat; position: absolute;}
+.nav-item:after {content: ''; top: 0; right: 0; width: 1.5rem; height: 3rem; background-image: url('../img/vavrin-right.png'); background-size: 100%; background-position: center; background-repeat: no-repeat; position: absolute;}
+.nav-link {position: relative;}
+.nav-link:hover, .nav-link:active, .nav-link:focus, .nav-item:hover, .nav-item:active, .nav-item:focus {color: white !important;}
+.navbar-collapse {background: transparent !important;}
+.h-100, .h-100 .container {height: 100vh!important;}
+.h-100 {margin-top:10rem;}
+footer {background-color: rgb(159,8,7) !important; color: rgb(244,222,110) !important;}
+footer a::after {content: ''; transition: all .15s ease-in-out; position: absolute; left: 0; top: 100%; width: 100%; height: 0rem; background-color: rgb(244,222,110); pointer-events: none;}
+.spacer {height: 16.5rem;}
+.btn-primary {background-color: black!important; color: white!important; border-radius: 0px!important; padding: 0.7rem 3rem; font-size: 1.5rem; border-color: black!important;}
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {background-color:#131313 !imporant;}
+@media (max-width: 1400px) {
+	.spacer {height: 14.3rem;}
+	.nav-link, .nav-item {color: #000000; padding-left: 0.5rem; padding-right: 0.5rem;}
+	h1, .h1 {}
+	h4, .h4 {}
+}
+@media (max-width: 1200px) {
+	.h-100, .h-100 .container {height: auto !important;}
+	.spacer {height: 12.3rem;}
+	.nav-link, .nav-item {color: #000000; padding-left: 0.3rem; padding-right: 0.3rem;}
+	h1, .h1 {}
+	h4, .h4 {}
+	.nav-link, .nav-item {padding-left: 0rem; padding-right: 0rem;}
+}
+@media (max-width: 1000px) {
+	header {background-image: url('../img/header.jpg'); background-size: auto 70%; background-position: 20% -20%; background-repeat: no-repeat;}
+	header .container {background: transparent;}
+	footer {background-image: url('../img/footer.jpg'); background-size: auto 70%; background-position: bottom center; background-repeat: no-repeat;}
+	footer .container {background: transparent;}
+	.spacer {height: 12.3rem;}
+	h1, .h1 {font-size: 3rem; margin-bottom: 0.5rem;}
+	h4, .h4 {font-size: 2rem; top: 0;}
+	.nobreak {display: none;}
+	.social {position: relative; flex-direction: row; justify-content: space-around; align-items: center; width: 100%;}
+	.social img {width: 4rem; margin: 0 1rem;}
+	.navbar {background-size: 460px!important;}
+}
+@media (max-width: 990px) {
+	.navbar-collapse {background-color: rgba(255,255,255,.75); margin-top: 1rem;}
+	.nav-link:after {display: none;}
+	.nav-link, .nav-item {display: inline-block !important;}
+}
+@media (max-width: 768px) {
+	header {background-size: auto 80%;  background-position: 35% -50%;}
+}
